@@ -5,6 +5,7 @@
 
 DESTDIR=/opt/rt-n56u
 ROOTDIR=`pwd`
+echo "输出当前路径 ${ROOTDIR}"
  echo "--------------开始复制默认配置文件----------"
 \cp -f ${ROOTDIR}/defaults.h ${DESTDIR}/trunk/user/shared/defaults.h
  echo "--------------开始复制默认配置文件结束----------"
