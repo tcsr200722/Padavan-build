@@ -60,9 +60,7 @@ jobs:
     - name: Clear And Build            # 5.清理构建树并开始构建
       run: |
         # 1.拷贝公共文件
-        cp -r $BASE_PATH/$PUBLIC_PATH/$THEME_PATH  $WORK_PATH/
-        cp -r $BASE_PATH/$PUBLIC_PATH/SSID  $WORK_PATH/
-        cp -f $BASE_PATH/$PUBLIC_PATH/$PUBLIC_SH  $WORK_PATH/
+        cp -r $BASE_PATH/$PUBLIC_PATH  $WORK_PATH/
         sudo chmod +x $WORK_PATH/$PUBLIC_SH
         # 2. 循环替换自定义默认模板和构建，单个设备的 sh 拷贝 t_item 需要编译的固件名字
         for t_item in $T_NAMES;
@@ -82,12 +80,14 @@ jobs:
         fi
         if [ ! -d $BASE_PATH/$t_item/$THEME_PATH ] ; then
           echo "${BASE_PATH}/${t_item}/${THEME_PATH} 自定义主题文件夹未找到"
-        elif [! -d $WORK_PATH/$THEME_PATH ] ; then
-              cp -r $BASE_PATH/$t_item/$THEME_PATH  $WORK_PATH/
+        elif [! -d $WORK_PATH/$PUBLIC_SH/$THEME_PATH ] ; then
+              cp -r $BASE_PATH/$t_item/$THEME_PATH  $WORK_PATH/$PUBLIC_SH
               echo "${THEME_PATH} 自定义主题文件夹拷贝成功"  
            else
-              rm -rf $WORK_PATH/$THEME_PATH
-              cp -r $BASE_PATH/$t_item/$THEME_PATH  $WORK_PATH/
+               #删除public拷贝的主题
+              sudo rm -rf $WORK_PATH/$PUBLIC_SH/$THEME_PATH/bootstrap
+              sudo rm -rf $WORK_PATH/$PUBLIC_SH/$THEME_PATH/images
+              cp -r $BASE_PATH/$t_item/$THEME_PATH  $WORK_PATH/$PUBLIC_SH
               echo "${THEME_PATH} 自定义主题文件夹拷贝成功"  
         fi
         done
