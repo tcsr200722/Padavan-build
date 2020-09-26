@@ -87,7 +87,7 @@ jobs:
                #删除public拷贝的主题
               sudo rm -rf $WORK_PATH/$PUBLIC_PATH/$THEME_PATH
               cp -r $BASE_PATH/$t_item/$THEME_PATH  $WORK_PATH/$PUBLIC_PATH
-              echo "${THEME_PATH} public主题文件夹拷贝成功"  
+              echo "${THEME_PATH} 自定义主题文件夹拷贝成功"  
         fi
         done
         # 3. 开始构建
