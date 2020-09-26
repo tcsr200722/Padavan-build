@@ -63,7 +63,7 @@ jobs:
         #cp -r $BASE_PATH/$PUBLIC_PATH/$THEME_PATH  $WORK_PATH/
         #cp -r $BASE_PATH/$PUBLIC_PATH/$THEME_PATH  $WORK_PATH/
         cp -r $BASE_PATH/$PUBLIC_PATH  $WORK_PATH/
-        #cp -f $BASE_PATH/$PUBLIC_PATH/$PUBLIC_SH  $WORK_PATH/
+        cp -f $BASE_PATH/$PUBLIC_PATH/$PUBLIC_SH  $WORK_PATH/
         sudo chmod +x $WORK_PATH/$PUBLIC_SH
         # 2. 循环替换自定义默认模板和构建，单个设备的 sh 拷贝 t_item 需要编译的固件名字
         for t_item in $T_NAMES;
