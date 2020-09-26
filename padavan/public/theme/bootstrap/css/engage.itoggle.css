@@ -41,7 +41,7 @@ div.main_itoggle input.iT_checkbox{
 
 div.main_itoggle label.disabled span
 {
-    background: url("/bootstrap/img/loading_bg.png") repeat scroll 50% 50% #AAAAAA;
+    background: url("../img/loading_bg.png") repeat scroll 50% 50% #AAAAAA;
     text-indent: 0px;
     opacity: 0.6;
 }
