@@ -18,9 +18,9 @@ DESTDIR=/opt/rt-n56u
  # trunk/user/httpd/httpd.h
  # trunk/user/www/n56u_ribbon_fixed/general.js
 \cp -f ../SSID/aspbw.c ${DESTDIR}/trunk/user/httpd/aspbw.c
-\cp -f ../SSID/SSID/httpd.h ${DESTDIR}/trunk/user/httpd/httpd.h
-\cp -f ../SSID/SSID/general.js ${DESTDIR}/trunk/user/www/n56u_ribbon_fixed/general.js
-\cp -f ../SSID/SSID/cmm_info.c ${DESTDIR}/trunk/proprietary/rt_wifi/rtsoc/2.7.X.X/rt2860v2/common/cmm_info.c
-\cp -f ../SSID/SSID/ralink.c ${DESTDIR}/trunk/user/httpd/ralink.c
+\cp -f ../SSID/httpd.h ${DESTDIR}/trunk/user/httpd/httpd.h
+\cp -f ../SSID/general.js ${DESTDIR}/trunk/user/www/n56u_ribbon_fixed/general.js
+\cp -f ../SSID/cmm_info.c ${DESTDIR}/trunk/proprietary/rt_wifi/rtsoc/2.7.X.X/rt2860v2/common/cmm_info.c
+\cp -f ../SSID/ralink.c ${DESTDIR}/trunk/user/httpd/ralink.c
     echo "--------------复制中文SSID支持文件结束----------"
  
